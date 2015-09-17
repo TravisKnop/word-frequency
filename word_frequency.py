@@ -2,7 +2,8 @@ import re
 import string
 
 with open("sample.txt") as infile:
-    lower_text = infile.read()
+    book = infile.read()
+lower_text = book.lower()
 clean_text = re.sub("[^a-zA-Z, ]+", "", lower_text)
 word_list = clean_text.split(' ')
 
